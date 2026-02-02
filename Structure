@@ -1,0 +1,49 @@
+aufsafety/
+├── core/                    # Core safety modules
+│   ├── geometric/          # Metric tensors, TCH
+│   │   ├── metric_tensor.py
+│   │   ├── topology.py     # Persistent homology
+│   │   ├── spectral.py     # Spectral gap computation
+│   │   └── binding.py      # Structural binding
+│   ├── constraints/        # Safety constraints
+│   │   ├── curvature.py
+│   │   ├── drift.py
+│   │   ├── integration.py  # Φ computation
+│   │   └── causal.py
+│   ├── lockdown/           # Lockdown protocols
+│   │   ├── levels.py
+│   │   ├── deepfreeze.py
+│   │   └── triggers.py
+│   ├── crypto/             # Cryptographic operations
+│   │   ├── certificates.py
+│   │   ├── merkle.py
+│   │   └── signatures.py
+│   └── advisory/           # AL computation
+│       ├── scoring.py
+│       └── thresholds.py
+├── experiments/            # Empirical validation
+│   ├── architectures/      # Model implementations
+│   │   ├── transformer_auf.py
+│   │   ├── rnn_auf.py
+│   │   └── ssm_auf.py
+│   ├── environments/       # Task environments
+│   │   ├── gridworld.py
+│   │   ├── procgen_maze.py
+│   │   └── bsuite_wrapper.py
+│   ├── training/           # Training pipelines
+│   │   ├── constrained_training.py
+│   │   └── baseline_training.py
+│   └── analysis/           # Statistical analysis
+│       ├── agency_metrics.py
+│       ├── statistical_tests.py
+│       └── visualization.py
+├── verification/           # Independent verification
+│   ├── redteam/           # Red team tools
+│   │   ├── attacks.py
+│   │   └── evaluation.py
+│   ├── replication/       # Replication scripts
+│   └── formal/            # Formal verification (Lean/Coq)
+└── docs/                  # Documentation
+    ├── specifications/    # Formal specs
+    ├── protocols/         # Experimental protocols
+    └── api/              # API documentation
